@@ -5,7 +5,7 @@
 (*****************************************************************************) 
 (* Spécification                                                             *) 
 (*****************************************************************************) 
-module type TP2 = sig
+module type TP = sig
 
   (* Principaux types du Tp ------------------------------------------------ *)
   (* ----------------------------------------------------------------------- *)
@@ -39,7 +39,7 @@ module type TP2 = sig
 
 end
 	       
-(* Exemples utilisés dans l'énoncé:
+(* Exemples utilisés dans l'énoncé:*)
 
 let pgm1 = 
 	([(1, Api "a", 2); (2, Epsilon, 6); (2, Epsilon, 6); (6, Api "e", 7);
@@ -59,7 +59,7 @@ let pgm4 =
 	([(0, Api "a", 6); (0, Epsilon, 3); (6, Api "b", 10); (6, Api "c", 8);
 	  (8, Epsilon, 8)],0);;
 
-
+(*
 transitionsImmediates pgm1 1;;
 transitionsImmediates pgm3 1;;
 transitionsImmediates pgm1 2;;
