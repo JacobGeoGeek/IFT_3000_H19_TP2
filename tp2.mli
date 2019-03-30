@@ -36,11 +36,10 @@ module type TP = sig
 
   (* 10 points *)
   val estSousPgm : programme -> programme -> bool
-
 end
-	       
-(* Exemples utilisés dans l'énoncé:*)
 
+(* Exemples utilisés dans l'énoncé:*)
+(*
 let pgm1 = 
 	([(1, Api "a", 2); (2, Epsilon, 6); (2, Epsilon, 6); (6, Api "e", 7);
 	  (7, Epsilon, 7); (7, Api "exit", 10)],1);;
@@ -59,7 +58,7 @@ let pgm4 =
 	([(0, Api "a", 6); (0, Epsilon, 3); (6, Api "b", 10); (6, Api "c", 8);
 	  (8, Epsilon, 8)],0);;
 
-(*
+
 transitionsImmediates pgm1 1;;
 transitionsImmediates pgm3 1;;
 transitionsImmediates pgm1 2;;
@@ -89,3 +88,4 @@ estSousPgm ([(0, Api "a", 1); (1, Api "c", 2)],0) pgm3;;
 estSousPgm pgm1' pgm1';;
 List.map (estSousPgm ([],0)) [pgm1;pgm2;pgm3;pgm4;pgm1';pgm2';pgm3'];;
 *)
+
