@@ -5,14 +5,16 @@
 (*****************************************************************************) 
 (* Spécification                                                             *) 
 (*****************************************************************************) 
-module type TP = sig
+module type TP2 = sig
 
   (* Principaux types du Tp ------------------------------------------------ *)
   (* ----------------------------------------------------------------------- *)
+  type  action = Epsilon | Api of string
+  type  etat = int
+
+  type  transition = etat * action * etat
   type programme = transition list * etat
-  and  transition = etat * action * etat
-  and  action = Epsilon | Api of string
-  and  etat = int
+  
        
       
   (* Signatures des fonctions du Tp à implanter --------------------------- -*)
